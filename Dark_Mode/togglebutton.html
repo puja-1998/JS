@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Mode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #ffffff; /* Light background */
+            color: #000000; /* Light text */
+            text-align: center;
+            padding: 50px;
+            transition: background-color .5s, color .5s;
+        }
+
+        .dark-theme {
+            background-color: #333333; /* Dark background */
+            color: #ffffff; /* Dark text */
+        }
+
+        .slider {
+            position: relative;
+            margin: 50px auto;
+            width: 100px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: #ccc;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 6px;
+        }
+
+        .button {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: left 0.3s;
+            /* transition: transform .5s, background-color .5s;
+            will-change: transform; */
+            
+        }
+
+        .button img {
+            width: 100%; /* Make image fill the button */
+            height: auto;
+        }
+
+        .dark .button {
+            left: 55px; /* Shift right for dark mode */
+        }
+        h1{
+           
+           /* display: flex;
+           justify-content: center;
+           align-items: center; */
+            font-size: 80px;
+            font-weight: 700;
+            font-family: "Montserrat", sans-serif;
+            
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="slider" id="themeSlider">
+    <div class="button" id="toggleButton">
+        <img id="buttonImage" src="https://media.istockphoto.com/id/1354219060/vector/sun-vector-cartoon-vector-logo-for-web-design-vector-illustration.jpg?s=612x612&w=0&k=20&c=nBAAzTT-al6gqBfdQi4E3l6AUK1g_b0LG0rBo0QlGDU=" alt="Light Mode Icon">
+    </div>
+</div>
+<h1>Click on the Toggle Button</h1>
+
+<script src="./script.js"></script>
+</body>
+</html>
